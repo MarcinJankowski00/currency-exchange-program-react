@@ -15,7 +15,6 @@ const Form = () => {
         PLN: 1
     };
 
-
     const onFormSubmit = (event) => {
         event.preventDefault();
         const endingAmount = amount * exchanges[startingCurrency] / exchanges[endingCurrency];
