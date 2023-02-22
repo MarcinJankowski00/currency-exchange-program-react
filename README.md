@@ -1,7 +1,7 @@
 # Currency exchange program
 
 ## Demo
-https://marcinjankowski00.github.io/Currency-Exchange-program/
+https://marcinjankowski00.github.io/currency-exchange-program-react/
 
 ![Website preview](https://raw.githubusercontent.com/MarcinJankowski00/Currency-Exchange-program/main/images/calc_preview.png)
 
