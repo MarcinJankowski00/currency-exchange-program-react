@@ -69,7 +69,8 @@ const Form = () => {
                         <input
                             className="form__field"
                             type="number"
-                            required={1}
+                            required
+                            autoFocus={true}
                             placeholder="Wpisz kwotę"
                             value={amount}
                             min="0.01"
