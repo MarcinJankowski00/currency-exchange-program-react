@@ -1,12 +1,12 @@
 import React from 'react';
 import Form from './Form';
-import Container from './Container';
+import './App.css';
 
 function App() {
   return (
-    <Container>
+    <div className='app'>
       <Form />
-    </Container>
+    </div>
   );
 }
 
