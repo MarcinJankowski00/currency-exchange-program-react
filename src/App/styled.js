@@ -1,4 +1,6 @@
-.app {
+import styled from "styled-components";
+
+export const Container = styled.div`
     max-width: 700px;
     margin: 250px auto;
     padding: 20px 40px 20px 40px;
@@ -6,4 +8,4 @@
     background: #d2be9f;
     box-shadow: 0px 0px 20px -4px #1E1A1A;
     text-align: center;
-}
+`;

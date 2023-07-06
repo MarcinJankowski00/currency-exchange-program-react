@@ -1,14 +1,14 @@
 import React from 'react';
 import Form from './Form';
 import ActualDate from './ActualDate';
-import './App.css';
+import { Container } from "./styled";
 
 function App() {
   return (
-    <div className='app'>
+    <Container>
       <ActualDate />
       <Form />
-    </div>
+    </Container>
   );
 }
 

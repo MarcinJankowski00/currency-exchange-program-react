@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { currencies } from "./currencies";
 import { Result } from './Result';
-import './style.css';
+import { Header, Element, Text, Select, Field, Button } from "./styled";
 
 const Form = () => {
     const [inputCurrency, setInputCurrency] = useState("PLN");
@@ -28,16 +28,15 @@ const Form = () => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <h1 className="form__header">Kalkulator walutowy</h1>
-            <div className="form__element">
+        <form onSubmit={onFormSubmit}>
+            <Header>Kalkulator walutowy</Header>
+            <Element>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <Text>
                             Mam:
-                        </span>
-                        <select
-                            className="form__field"
+                        </Text>
+                        <Select
                             value={inputCurrency}
                             onChange={(event) => setInputCurrency(event.target.value)}
                         >
@@ -49,16 +48,15 @@ const Form = () => {
                                     {currency.name}
                                 </option>
                             )))}
-                        </select>
+                        </Select>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <Text>
                             Chcę otrzymać:
-                        </span>
-                        <select
-                            className="form__field"
+                        </Text>
+                        <Select
                             value={outputCurrency}
                             onChange={(event) => setOutputCurrency(event.target.value)}
                         >
@@ -70,15 +68,15 @@ const Form = () => {
                                     {currency.name}
                                 </option>
                             )))}
-                        </select>
+                        </Select>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">
-                            Kwota: </span>
-                        <input
-                            className="form__field"
+                        <Text>
+                            Kwota:
+                        </Text>
+                        <Field
                             type="number"
                             required
                             autoFocus={true}
@@ -90,8 +88,8 @@ const Form = () => {
                         />
                     </label>
                 </p>
-            </div>
-            <button className="form__button">Oblicz</button>
+            </Element>
+            <Button>Oblicz</Button>
             <Result result={result} />
         </form>
     );
