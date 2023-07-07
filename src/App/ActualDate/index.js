@@ -8,12 +8,12 @@ const formatDate = (date) => date.toLocaleDateString(undefined, {
     minute: "2-digit",
     second: "2-digit",
     day: "numeric",
-    month: "long" 
-    });
+    month: "long"
+});
 
 const ActualDate = () => {
-    const date= useCurrentDate();
-    
+    const date = useCurrentDate();
+
     return (
         <Clock>
             Dzisiaj jest {formatDate(date)}
