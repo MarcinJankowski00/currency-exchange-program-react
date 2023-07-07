@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useCurrentDate } from "./useCurrentDate";
 import { Clock } from "./styled";
 
+const formatDate = (date) => date.toLocaleDateString(undefined, {
+    weekday: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    day: "numeric",
+    month: "long" 
+    });
+
 const ActualDate = () => {
-    const [myDate, setMyDate] = useState(new Date());
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setMyDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, []);
-
+    const date= useCurrentDate();
+    
     return (
         <Clock>
-            Dzisiaj jest {myDate.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" })}, {myDate.toLocaleTimeString()}
+            Dzisiaj jest {formatDate(date)}
         </Clock>
     )
 }
