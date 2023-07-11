@@ -1,17 +1,18 @@
 import { useState } from 'react';
-import { currencies } from "./currencies";
 import { Result } from './Result';
 import { Header, Element, Text, Select, Field, Button } from "./styled";
+import { useRatesData } from './useRatesData';
 
 const Form = () => {
+    const ratesData = useRatesData();
     const [inputCurrency, setInputCurrency] = useState("PLN");
     const [outputCurrency, setOutputCurrency] = useState("USD");
     const [amount, setAmount] = useState("");
     const [result, setResult] = useState("");
 
     const calculateResult = (inputCurrency, outputCurrency, amount) => {
-        const inputRate = currencies.find(({ short }) => short === inputCurrency).rate;
-        const outputRate = currencies.find(({ short }) => short === outputCurrency).rate;
+        const inputRate = ratesData.rates[inputCurrency];
+        const outputRate = ratesData.rates[outputCurrency];
         const outputAmount = amount * inputRate / outputRate;
         setResult({
             sourceAmount: +amount,
@@ -38,14 +39,14 @@ const Form = () => {
                         </Text>
                         <Select
                             value={inputCurrency}
-                            onChange={(event) => setInputCurrency(event.target.value)}
+                            onChange={({ target }) => setInputCurrency(target.value)}
                         >
-                            {currencies.map((currency => (
+                            {Object.keys(ratesData.rates).map((currency => (
                                 <option
-                                    key={currency.short}
-                                    value={currency.short}
+                                    key={currency}
+                                    value={currency}
                                 >
-                                    {currency.name}
+                                    {currency}
                                 </option>
                             )))}
                         </Select>
@@ -58,14 +59,14 @@ const Form = () => {
                         </Text>
                         <Select
                             value={outputCurrency}
-                            onChange={(event) => setOutputCurrency(event.target.value)}
+                            onChange={({ target }) => setOutputCurrency(target.value)}
                         >
-                            {currencies.map((currency => (
+                            {Object.keys(ratesData.rates).map((currency => (
                                 <option
-                                    key={currency.short}
-                                    value={currency.short}
+                                    key={currency}
+                                    value={currency}
                                 >
-                                    {currency.name}
+                                    {currency}
                                 </option>
                             )))}
                         </Select>
