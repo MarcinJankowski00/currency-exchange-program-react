@@ -32,21 +32,21 @@ export const Field = styled.input`
 `;
 
 export const Button = styled.button`
-    background-color: rgb(155, 122, 81);
+    background-color: ${({ theme }) => theme.color.leather};
     width: 100%;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0px 0px 20px -4px #1e1a1a;
+    box-shadow: 0px 0px 20px -4px ${({ theme }) => theme.color.leather};
     transition: 0.3s;
-    border: 1px solid rgb(69, 69, 69);
+    border: 1px solid ${({ theme }) => theme.color.black};
     cursor: pointer;
 
     &:hover {
-    background-color: rgb(172, 135, 90);
+        filter: brightness(110%);
     }
 
     &:active {
-    background-color: rgb(196, 154, 103);
-    box-shadow: none;
+        filter: brightness(120%);
+        box-shadow: none;
     }
 `;
