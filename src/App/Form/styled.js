@@ -50,3 +50,7 @@ export const Button = styled.button`
         box-shadow: none;
     }
 `;
+
+export const Mesage = styled.p`
+    text-align: center;
+`;
