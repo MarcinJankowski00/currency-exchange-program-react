@@ -32,6 +32,5 @@ export const useRatesData = () => {
         };
         setTimeout(fetchRates, 3000);
     }, []);
-    console.log(ratesData);
     return { ratesData };    
 };
