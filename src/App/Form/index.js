@@ -17,7 +17,7 @@ const Form = () => {
         setResult({
             sourceAmount: +amount,
             targetAmount: outputAmount,
-            rate: amount / outputAmount,
+            rate: outputAmount / amount,
             inputCurrency,
             outputCurrency,
         });
