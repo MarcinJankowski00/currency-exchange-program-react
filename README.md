@@ -3,7 +3,7 @@
 ## Demo
 https://marcinjankowski00.github.io/currency-exchange-program-react/
 
-![Website preview](https://raw.githubusercontent.com/MarcinJankowski00/Currency-Exchange-program/main/images/calc_preview.png)
+![Website preview](https://github.com/MarcinJankowski00/currency-exchange-program-react/blob/main/public/calc_preview.png)
 
 ## Description
 The website includes a currency converter program. There are 176 currencies available, fetched from an API. 
