@@ -6,9 +6,8 @@ https://marcinjankowski00.github.io/currency-exchange-program-react/
 ![Website preview](https://raw.githubusercontent.com/MarcinJankowski00/Currency-Exchange-program/main/images/calc_preview.png)
 
 ## Description
-A website that contains program that exchanges currencies. There are 5 currencies to choose from: PLN, EUR, USD, GBP, CHF. 
-
-The website is in polish language
+The website includes a currency converter program. There are 176 currencies available, fetched from an API. 
+Additionally, the website displays the current date and time.
 
 ## Instruction
 To use the calculator, select the currency you want to exchange in the first selection field.
@@ -26,6 +25,7 @@ The exchange rate and the converted amount will be displayed below.
 - CamelCase naming convention
 - BEM naming convention
 - React
+- Fetching data from an API
 
 ## Available Scripts
 
