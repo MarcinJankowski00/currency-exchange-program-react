@@ -13,11 +13,11 @@ const Form = () => {
     const calculateResult = (inputCurrency, outputCurrency, amount) => {
         const inputRate = ratesData.data.data[inputCurrency].value;
         const outputRate = ratesData.data.data[outputCurrency].value;
-        const outputAmount = amount * inputRate / outputRate;
+        const outputAmount = amount * outputRate / inputRate;
         setResult({
             sourceAmount: +amount,
             targetAmount: outputAmount,
-            rate: outputAmount / amount,
+            rate: amount / outputAmount,
             inputCurrency,
             outputCurrency,
         });
