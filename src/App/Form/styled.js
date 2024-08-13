@@ -54,3 +54,10 @@ export const Button = styled.button`
 export const Mesage = styled.p`
     text-align: center;
 `;
+
+export const LoaderWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+`;
