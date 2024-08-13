@@ -33,12 +33,13 @@ const Form = () => {
         <form onSubmit={onFormSubmit}>
             {ratesData.status === "loading" ? (
                 <>
-                    <Mesage>
-                        Pobieramy najnowsze dane z Narodowego Banku, proszę o chwilę cierpliwości
-                    </Mesage>
+                    <Header>Kalkulator walutowy</Header>
                     <LoaderWrapper>
                         <ClipLoader size={75} color='alto' />
                     </LoaderWrapper>
+                    <Mesage>
+                        Pobieramy najnowsze dane z Narodowego Banku, proszę o chwilę cierpliwości
+                    </Mesage>
                 </>
             ) : ratesData.status === "error" ? (
                 <Mesage>
